@@ -1,5 +1,7 @@
-main.c:57:6:display7SEG	11
-main.c:158:5:main	2
-main.c:206:6:SystemClock_Config	3
-main.c:243:13:MX_GPIO_Init	1
-main.c:283:6:Error_Handler	1
+main.c:57:6:traffic_light	4
+main.c:96:6:display7SEG_1	6
+main.c:144:6:display7SEG_2	6
+main.c:198:5:main	6
+main.c:269:6:SystemClock_Config	3
+main.c:306:13:MX_GPIO_Init	1
+main.c:360:6:Error_Handler	1
