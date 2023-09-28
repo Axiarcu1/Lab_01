@@ -54,7 +54,20 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void clearAllClock(){
+	HAL_GPIO_WritePin(C12_GPIO_Port, C12_Pin, RESET);
+	HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, RESET);
+	HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, RESET);
+	HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, RESET);
+	HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, RESET);
+	HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, RESET);
+	HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, RESET);
+	HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, RESET);
+	HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, RESET);
+	HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, RESET);
+	HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, RESET);
+	HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, RESET);
+}
 /* USER CODE END 0 */
 
 /**
@@ -93,42 +106,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(C12_GPIO_Port, C12_Pin, RESET);
-	  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, RESET);
-	  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, RESET);
-	  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, RESET);
-	  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, RESET);
-	  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, RESET);
-	  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, RESET);
-	  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, RESET);
-	  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, RESET);
-	  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, RESET);
-	  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, RESET);
-	  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, RESET);
-	  HAL_GPIO_WritePin(C12_GPIO_Port, C12_Pin, SET);
-	  HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
