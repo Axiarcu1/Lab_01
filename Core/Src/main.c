@@ -151,6 +151,12 @@ void clearNumberOnClock(int n){
 }
 
 /* USER CODE END 0 */
+int h_num = 6;
+int m_num = 20;
+int s_num = 0;
+int s_counter = 2;
+int m_blink_counter = 10;
+int m_state = 0;
 
 /**
   * @brief  The application entry point.
@@ -188,7 +194,47 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+	  clearAllClock();
+	  if (s_num >= 60){
+		  s_num = 0;
+		  m_num++;
+		  if (m_num >= 60){
+			  m_num = 0;
+			  clearNumberOnClock(h_num);
+			  h_num++;
+			  if (h_num >=12){
+				 h_num = 0;
+			  }
+		  }
+	  }
+	  if (s_counter <= 0){
+		  s_num++;
+		  s_counter = 2;
+	  }
+	  if (s_num % 5 == 0){
+		  if (s_num / 5 == 0){
+			  clearNumberOnClock(11);
+		  }
+	  else{
+		  clearNumberOnClock(s_num / 5 - 1);
+	  }
+		  setNumberOnClock(s_num / 5);
+	  }
+	  setNumberOnClock(h_num);
+	  if (m_blink_counter <= 0){
+		  if (m_state == 0){
+			  setNumberOnClock(m_num/5);
+			  m_blink_counter = 1;
+		  }
+		  else{
+			  clearNumberOnClock(m_num/5);
+			  m_blink_counter = 0;
+		  }
+		  m_blink_counter = 10;
+	  }
+	  m_blink_counter--;
+	  s_counter--;
+	  HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
